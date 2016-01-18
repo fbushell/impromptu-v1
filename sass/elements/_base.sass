@@ -1,0 +1,118 @@
+//    _   _   _   _     //
+//   / \ / \ / \ / \    //
+//  ( B | A | S | E )   //
+//   \_/ \_/ \_/ \_/    //
+
+// "I gotta Benz!"   -Frankie
+
+// ..............................................
+//
+//  Your top level selectors my lord...
+//
+// ..............................................
+
+@import url("https://hello.myfonts.net/count/2c65a6")
+
+@font-face 
+  font-family: 'AvantGardeGothicITCW01Bd'
+  src: url('/assets/fonts/2C65A6_0_0.eot')
+  src: url('/assets/fonts/2C65A6_0_0.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/2C65A6_0_0.woff2') format('woff2'),url('/assets/fonts/2C65A6_0_0.woff') format('woff'),url('/assets/fonts/2C65A6_0_0.ttf') format('truetype'),url('/assets/fonts/2C65A6_0_0.svg#wf') format('svg')
+ 
+html
+  height: 100%
+  width: 100%
+  font-size: 19px
+
+body
+  font-family: $baseFontFamily
+  line-height: $baseLineHeight
+  font-weight: $baseFontWeight
+  font-style: normal
+  color: $black
+  background: $bodyBackground
+  width: 100%
+  height: 100%
+
+a
+  color: $linkColor
+  text-decoration: none
+  border-bottom: 1px solid
+  &:hover
+    color: $linkHoverColor
+    text-decoration: none
+    cursor: pointer
+  &:focus
+    outline: none
+  &:visited
+    color: $black
+  img
+    border: none
+
+img
+  width: auto
+  height: auto
+  max-width: 100%
+  vertical-align: middle
+  border: 0
+  -ms-interpolation-mode: bicubic
+  opacity: 1
+  -moz-transition: opacity 0.2s ease
+  -webkit-transition: opacity 0.2s ease
+  transition: opacity 0.2s ease
+  &:not([src])
+    opacity: 0
+
+#map_canvas 
+  img, object, embed
+    max-width: none
+
+#googlemap img, object, embed
+  max-width: none
+
+*:focus
+  outline: none
+
+body:not(.landing)
+  .too-small
+    visibility: hidden
+    position: fixed
+    left: -100%
+    bottom: 0
+    top: 0
+    width: 100%
+    background: $grayLight
+    transition: 500ms ease-in
+    padding: 50% 0
+    text-align: center
+    @media (max-width: 800px)
+      left: 0
+      visibility: visible
+      z-index: 420420
+
+body.terms .too-small,
+body.disclaimers .too-small
+  display: none !important
+
+
+
+
+// ..............................................
+//
+//  Praise the Loader
+//
+// ..............................................
+
+
+.btn-load-wrap
+  display: inline-block
+  position: relative
+
+
+// ..............................................
+//
+//  SVG
+//
+// ..............................................
+svg
+  height: 30px
+  width: 30px

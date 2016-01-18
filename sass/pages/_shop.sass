@@ -1,0 +1,171 @@
+#productGallery
+  position: relative
+  z-index: 1
+
+.collection-editions
+  #siteWrapper
+    margin: 0 auto 100px
+    width: 100%
+    max-width: 100%
+  .banner-thumbnail-wrapper img
+    width: 100%
+
+// products
+.view-item
+  &.collection-editions #siteWrapper
+    margin: 150px auto
+    width: 90%
+    max-width: 1700px
+  .banner-thumbnail-wrapper
+    display: none
+
+
+#productDetails .product-title
+  font-size: 2.5rem
+  margin: 0
+
+#productDetails .product-price
+  font-size: 1.3rem
+
+.quantity-label
+  display: none
+
+#productDetails input
+  padding: 10px
+  border: 1px solid $black
+  width: auto
+
+.sqs-add-to-cart-button-wrapper
+  margin-top: 30px
+
+#productList
+  max-width: 1100px
+  margin: 0 auto
+  a,product
+    border: none
+
+#productList .product
+  overflow: visible !important
+
+#productNav a 
+  .meta-font
+    color: $gray
+
+.editions-description
+  text-align: center
+  margin: 50px auto
+  max-width: 500px
+  width: 90%
+
+body:not(.button-style-default).button-style-outline .sqs-editable-button, 
+body:not(.button-style-default).button-style-outline .sqs-editable-button-style
+  border-width: 1px !important
+  &:hover
+    background: $black
+    -webkit-font-smoothing: antialiased
+
+
+.product-mark,
+.ss-social-button,
+.sqs-simple-like .like-count,
+.entry-comments,
+.sqs-disqus-comment-link 
+  .meta-font
+    font-size: 0.825em
+
+
+.collection-type-products.show-category-navigation 
+  .filter-heading.filter-by-category 
+    display: none
+
+
+.collection-type-products
+  #productNav 
+    display: block
+    position: fixed
+    right: 0
+    left: 0
+    bottom: 0
+    font-family: $headingsFontFamily
+    font-weight: $headingsFontWeight
+    font-size: 0.7rem
+    text-transform: uppercase
+    margin: 0
+    z-index: 100
+    padding: 15px
+    text-align: center
+    letter-spacing: 0.1em
+    border-top: 2px solid
+    a
+      border: none
+
+// custom cart
+.custom-cart 
+  position: fixed
+  top: 10px
+  opacity: 1
+  .font-smoothing
+    color: black
+    visibility: visible
+  .nav-font
+    font-size: 13px
+    letter-spacing: 1px
+    z-index: 1101
+  .sqs-cart-quantity 
+    display: inline
+  a,
+  a:visited 
+    display: block
+    color: black
+    padding: 12px
+    white-space: nowrap
+    line-height: 1em
+  
+.no-touch .product-list-titles-overlay #productList .product .product-overlay
+  top: auto
+  height: 60px
+  bottom: -25px
+
+#productList .product:hover .product-image img
+  opacity: 1 !important
+
+.no-touch .product-list-titles-overlay #productList .product .product-overlay
+  opacity: 1 !important
+
+.no-touch .product-list-titles-overlay #productList .product .product-meta
+  opacity: 1 !important
+  top: 0
+  bottom: 0
+  margin-top: 0 !important
+
+.custom-cart.empty
+  opacity: 0
+  top: -10px
+  visibility: hidden
+
+.yui3-lightbox2 .yui3-lightbox2-content
+  display: none !important
+
+#productGallery #productSlideshow .slide
+  cursor: default !important
+
+
+.sqs-shopping-cart-wrapper
+  max-width: 1000px
+  margin: 0 auto
+  h2
+    font-size: 1.5rem
+    margin-bottom: 30px
+
+.sqs-fullpage-shopping-cart-content .cart-container table thead td
+  font-size: 1rem
+  font-weight: 400
+
+#confirmed-page
+  text-align: center
+  max-width: 500px
+  margin: 0 auto
+
+@media only screen and (max-width: 700px)
+  .product-meta
+    text-align: center

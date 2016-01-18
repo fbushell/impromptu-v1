@@ -1,0 +1,399 @@
+.sqs-layout .sqs-col-12 .html-block
+  max-width: 100% !important
+
+.collection-type-blog article header a:hover
+  color: $black
+
+.collection-type-blog 
+  .main-header
+    height: 55px
+    background: white
+    border-bottom: 2px solid
+    a:hover
+      color: $black
+  #siteWrapper
+    max-width: 100%
+    width: 100%  
+  #page
+    width: auto
+    margin: auto
+    max-width: 90%
+    padding: 100px 0
+  #content 
+    width: 100%
+  article
+    margin-bottom: 100px 
+    padding-bottom: 100px
+    border-bottom: 2px solid
+    &:last-child
+      border-bottom: 0
+    header 
+      text-align: center
+      margin-bottom: 70px
+      position: relative
+      &:after
+        content: ""
+        position: absolute
+        bottom: -30px
+        width: 100px
+        left: 50%
+        margin-left: -50px
+        height: 2px
+        background: $black
+      a
+        border: none
+      .meta-below-title
+        font-size: 0.8rem
+    header,
+    footer,
+    .excerpt-content,
+    .sqs-layout .sqs-col-12 .html-block,
+    .sqs-layout .sqs-col-12 .markdown-block,
+    .p-comment 
+      max-width: 90%
+      margin-right: auto
+      margin-left: auto
+    footer 
+      text-align: center
+      margin-top: 10px
+      font-size: 0.8rem
+
+  .sqs-simple-like
+    margin-right: 15px
+  figcaption
+    display: none
+
+
+.collection-blog.view-list
+  #siteWrapper
+    max-width: 1700px
+
+// ‹›‹›‹›‹›‹›‹›‹›‹›‹›‹›‹›‹›‹›‹› cUsT0m
+
+$authorProfileWidth: 36em
+
+.author-profile
+  .border-box
+    display: none
+    max-width: $authorProfileWidth
+    margin: 0 auto
+    padding: 30px
+
+.author-profile-image
+  .border-box
+    width: 180px
+    margin: 0 auto
+    >img
+      max-width: 100%
+  
+
+.author-profile-content
+  max-width: 420px
+  margin: 24px auto
+  text-align: center
+
+.author-profile-name
+  margin-top: 0
+  a, a:hover, a:active
+    color: $black
+  
+
+.author-profile-location
+  .meta-font
+    color: $gray
+
+.author-profile-name,
+.author-profile-location,
+.author-profile-bio
+  margin: 16px 0
+
+
+// Only article list view
+
+.view-list 
+  .filter-heading 
+    .border-box
+      text-align: center
+      max-width: 1500px
+      margin: 0 auto -30px
+      padding: 30px 30px 0
+      span,   
+      span:after  
+        content: '\00D7' 
+        padding-left: 1em 
+      a 
+        .nav-font
+          color: $black
+          text-decoration: none
+          padding: 0.5em 0
+          border-bottom: 2px solid $black
+    
+  
+
+  // hide filters on non-blog collections
+  &:not(.collection-type-blog) .filter-heading  
+    display: none 
+
+  .entry + .entry 
+    margin-top: 100px
+  
+
+  .excerpt-thumb 
+    text-align: center
+    margin-bottom: 3em
+    a 
+      display: block
+    img 
+      max-width: 100%
+      height: auto
+    
+  .p-summary 
+    p:first-child  
+      margin-top: 0 
+  
+  .entry-content 
+    overflow: hidden
+  
+
+
+// Only article item view
+
+.view-item 
+  .blog-item 
+    .p-comment 
+      max-width: 36em
+      margin-right: auto
+      margin-left: auto
+    
+
+
+// General article element styles
+
+.entry-dateline,
+.entry-byline,
+.entry-morefrom, 
+  display: inline
+
+
+.item-meta,
+.meta-above-title,
+.meta-below-title,
+.meta-below-content,
+.eventitem-backlink,
+.eventitem-column-meta 
+  .meta-font
+    color: $black
+
+.meta-above-title,  
+.meta-below-title 
+  margin-bottom: 1em
+
+
+.sqs-block.image-block .image-caption-wrapper p,
+.video-caption 
+  font-size: 0.825em
+  color: $black
+
+
+.entry-title 
+  margin: 0 0 25px 0
+
+
+.entry-title-passthrough:after 
+  content: "\279D"
+  font: normal 0.9em sans-serif
+
+
+.entry-more-link 
+  margin-bottom: 0
+
+
+.entry-more-link a:before 
+  content: "Read More"
+
+
+.entry-more-link a:after 
+  content: " \279D"
+  font: normal 0.9em sans-serif
+
+
+.entry-footer 
+  line-height: 1.25em
+
+
+.entry-tags,
+.entry-source 
+  margin-top: 2em
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+
+// Meta
+.meta-below-content
+  display: none
+
+
+// Comment, like and share
+
+.entry-actions 
+  margin-top: 1.5em
+  .entry-comments,
+  .sqs-disqus-comment-link 
+    display: inline-block
+    margin-right: 1em
+    text-decoration: none
+    &:before 
+      margin-right: 0.2em
+      position: relative
+      top: 0.12em
+      // start override sqs-ui-font
+      font-size: 1.2em
+      width: auto
+      height: auto
+      line-height: inherit
+      text-align: left
+      vertical-align: initial
+      // end override sqs-ui-font
+    
+
+  
+
+// Blog next and previous navigation
+
+.pagination 
+  text-align: center
+  margin-top: 100px
+  display: table
+  width: 100%
+  +clearfix
+  font-family: $headingsFontFamily
+  font-weight: $headingsFontWeight
+  > div 
+    .border-box
+      display: table-cell
+      width: 50%
+      padding: 0 0.5em
+      font-size: 0
+    a 
+      font-size: initial
+      line-height: 1.3em
+      display: block
+      color: $black
+      white-space: nowrap
+    span 
+      display: inline-block
+      width: auto
+      white-space: normal
+      vertical-align: middle
+    
+  .newer 
+    float: left
+
+  .older 
+    float: right
+    
+
+
+// Apply tweaks for blog
+
+.hide-entry-author:not(.meta-priority-author) 
+  .entry-byline  
+    display: none 
+
+
+.hide-list-entry-footer 
+  &.view-list .entry-footer 
+    display: none
+  
+
+.meta-priority-date 
+  .meta-above-title,
+  .item-meta 
+    > div:not(.entry-dateline)  
+      display: none 
+  
+  .meta-below-title,
+  .meta-below-content 
+    > .entry-dateline  
+      display: none 
+  
+  &:not(.hide-entry-author)
+    .meta-below-title,
+    .meta-below-content
+      .entry-byline + .entry-morefrom:before  
+        content: '\00B7' 
+        padding: 0 0.5em 
+  
+
+.meta-priority-category 
+  .meta-above-title,
+  .item-meta 
+    > div:not(.entry-morefrom)  
+      display: none 
+  
+  .meta-below-title,
+  .meta-below-content
+    > .entry-morefrom  
+      display: none 
+  
+  .meta-below-title,
+  .meta-below-content
+    entry-dateline + .entry-byline:before  
+      content: '\00B7' 
+      padding: 0 0.5em 
+
+.meta-priority-author 
+  .meta-above-title,
+  .item-meta 
+    > div:not(.entry-byline)  
+      display: none 
+  
+  .meta-below-title,
+  .meta-below-content
+    > .entry-byline  
+      display: none 
+  
+  .meta-below-title,
+  .meta-below-content
+    .entry-morefrom:before  
+      content: '\00B7' 
+      padding: 0 0.5em 
+
+.meta-priority-none 
+  .meta-above-title,
+  .item-meta  
+    display: none 
+  .meta-below-title,
+  .meta-below-content 
+    .entry-byline:before,
+    .entry-morefrom:before  
+      content: '\00B7' 
+      padding: 0 0.5em 
+
+
+
+
+// Item title
+
+.blog-item-wrapper
+  display: block
+  z-index: 100
+  position: relative
+  width: 100%
+  .border-box
+    margin: 0 auto
+    padding: 30px
+    text-align: center
+
+
+@media (max-width: 43rem)
+  .collection-type-blog #page
+    padding: 0
+    max-width: 100%
+  .sqs-block-html
+    margin: 0 20px !important
+  .sqs-layout:not(.sqs-editing) .sqs-row+.sqs-row:not(:last-child) .sqs-block:last-child
+    padding-bottom: 0 !important
+  .sqs-layout:not(.sqs-editing) .sqs-block+.sqs-row .sqs-block:not(.float):first-child
+    padding-bottom: 0 !important

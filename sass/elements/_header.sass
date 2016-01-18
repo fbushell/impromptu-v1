@@ -1,0 +1,72 @@
+.page-header
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  border-bottom: 2px solid $black
+  height: $header-height
+  background: white
+  background: rgba(255,255,255,0.95)
+  z-index: 3000
+  h3
+    margin: 0
+    position: absolute
+    left: 30px
+    top: 15px
+    font-size: 2em
+    font-weight: 400
+    & > span
+      color: $gray
+      -webkit-font-smoothing: antialiased
+      a
+        color: $gray
+        border: none
+        &:hover
+          text-decoration: underline
+  .page-actions
+    position: absolute
+    right: 30px
+    top: 16px
+    .sm
+      font-size: 1em
+      padding: 1px 15px
+      color: white
+  .old-page-actions
+    & > a
+      border: 1px solid $gray
+      background: lighten($gray, 7%)
+      padding: 6px 15px
+      margin-left: 10px
+      display: inline
+      font-family: $headingsFontFamily
+      font-size: 0.8em
+      border-radius: $button-border
+      cursor: pointer
+      &.save
+        background: lighten($primaryColor, 12%)
+        border: 1px solid $primaryColor
+        color: white
+        -webkit-font-smoothing: antialiased
+        &:hover
+          background: lighten($primaryColor, 7%)
+      &:hover
+        background: lighten($gray, 3%)
+      &.active
+        border: 1px solid darken($gray, 12%)
+        background: darken($gray, 7%)
+        color: white
+        -webkit-font-smoothing: antialiased
+        &:hover
+          background: darken($gray, 12%)
+
+.sm-logo
+  position: fixed
+  top: 10px
+  left: 30px
+  z-index: 600
+  a
+    border: none
+  svg
+    width: 102px
+    height: 33px
+
