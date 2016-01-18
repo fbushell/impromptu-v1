@@ -1,0 +1,5 @@
+{.repeated section items}
+  <div class="group-alt">
+    <img {@|image-meta} />
+  </div>
+{.end}

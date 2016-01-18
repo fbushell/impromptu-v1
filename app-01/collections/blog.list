@@ -1,0 +1,67 @@
+<div class="blog-list clear" data-collection-id="{collection.id}">
+
+  {.repeated section items}
+  <article class="entry h-entry {@|item-classes}" id="article-{id}" data-item-id="{id}">
+
+    <header class="entry-header">
+      <h1 data-content-field="title" class="entry-title p-name">
+      {.passthrough?}
+        <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">{title}</a>
+      {.or}
+        <a href="{fullUrl}" class="u-url" rel="bookmark">{title}</a>
+      {.end}
+      </h1>
+      <div class="meta-below-title">
+        {.section author}
+        <div class="entry-dateline">
+          <time class="dt-published published entry-date" datetime="{addedOn|date %F}" pubdate>{addedOn|date %B %e, %Y}</time>
+          {.if updatedOn}<time class="dt-updated updated" datetime="{updatedOn|date %F}"></time>{.end}
+        </div>
+        {.end}
+      </div>
+    </header>
+
+    <div class="entry-content">
+      {.excerpt?}
+        {.main-image?}
+        <div class="excerpt-thumb">
+          <a href="{fullUrl}" class="excerpt-image"><img {@|image-meta} /></a>
+        </div>
+        {.end}
+        <div class="excerpt-content">
+          <div class="p-summary">{excerpt}</div>
+          <p class="entry-more-link"><a href="{fullUrl}"></a></p>
+        </div>
+      {.or}
+        {.section body}
+          <div class="e-content">{@}</div>
+        {.end}
+      {.end}
+    </div>
+
+    <footer class="entry-footer clear">
+      {.section sourceUrl}
+      <p class="entry-source">
+        Source: <a href="{sourceUrl}" target="_blank">{sourceUrl}</a>
+      </p>
+      {.end}
+      <div class="entry-actions">
+        {@|like-button}{@|social-button-inline}
+      </div>
+    </footer>
+
+    {.if postItemInjectCode}<div class="entry-injection">{postItemInjectCode}</div>{.end}
+
+  </article>
+  {.end}
+
+  {.if pagination}
+  <nav class="pagination clear" data-paginate="scroll">
+    {.if pagination.prevPage}<div class="newer"><a href="{pagination.prevPageUrl}" rel="prev"><span class="prev-label">Newer</span></a></div>{.end}
+    {.if pagination.nextPage}<div class="older"><a href="{pagination.nextPageUrl}" rel="next"><span class="next-label">Older</span></a></div>{.end}
+  </nav>
+  {.end}
+
+</div>
+
+

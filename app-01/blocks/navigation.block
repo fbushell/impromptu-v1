@@ -1,0 +1,32 @@
+{.section items}
+  <div id="mainNavWrapper" class="nav-wrapper show-on-scroll">
+    <nav id="mainNavigation" data-content-field="navigation" >
+      {.repeated section @}
+        {.collection?}
+          
+          {.if collection}
+            {.if collection.homepage}
+              {.repeated section items}
+                {.section collection}
+                  <div class="index home">
+                    <a href="/#{collection.urlId}-section">
+                      {navigationTitle}
+                    </a>
+                  </div>
+                {.end}
+              {.end}
+            {.end}
+            <div class="index{.if collection.homepage} base{.end}{.if active} active{.end}">
+              <a href="{collection.fullUrl}">
+                {collection.navigationTitle}
+              </a>
+            </div>
+          {.end}
+
+        {.end}
+      {.end}
+    </nav>
+  </div>
+
+{.end}
+
